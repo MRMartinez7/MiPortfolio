@@ -1,0 +1,44 @@
+div{
+    color: white;
+    display: block;
+}
+.nombre{
+    display: flex;
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    bottom: 240px;
+    left: 220px;    
+}
+.info{display: flex;
+    position: absolute;
+    font-size: 20px;    
+    bottom: 220px;
+    left: 260px;  
+
+}
+.aboutme{
+    
+    display: flex;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 50%;
+    bottom: 100px;
+}
+.avatar{    
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    position: relative;
+    bottom: 95px;
+    left: 55px;
+    width: 150px;
+    height: 150px;
+}
+.sobremi{
+    border-style: solid;
+    border-radius: 7px;
+    padding: 25px;
+    border-width: 1px;
+}
