@@ -1,16 +1,16 @@
 div{
-    color: white;
-    display: block;
-}
-.nombre{
     display: flex;
+    color: white;
+    }
+.nombre{
+    
     position: absolute;
     font-size: 25px;
     font-weight: bold;
     bottom: 200px;
     left: 220px;    
 }
-.info{display: flex;
+.info{
     position: absolute;
     font-size: 20px;    
     bottom: 180px;
@@ -18,8 +18,6 @@ div{
 
 }
 .aboutme{
-    
-    display: flex;
     position: relative;
     text-align: center;
     margin: 0 auto;
@@ -29,7 +27,6 @@ div{
 .avatar{    
     border-radius: 50%;
     background-color: white;
-    display: flex;
     position: relative;
     bottom: 120px;
     left: 55px;
