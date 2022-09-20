@@ -7,13 +7,13 @@ div{
     position: absolute;
     font-size: 25px;
     font-weight: bold;
-    bottom: 240px;
+    bottom: 200px;
     left: 220px;    
 }
 .info{display: flex;
     position: absolute;
     font-size: 20px;    
-    bottom: 220px;
+    bottom: 180px;
     left: 260px;  
 
 }
@@ -31,7 +31,7 @@ div{
     background-color: white;
     display: flex;
     position: relative;
-    bottom: 95px;
+    bottom: 120px;
     left: 55px;
     width: 150px;
     height: 150px;
