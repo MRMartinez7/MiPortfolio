@@ -3,6 +3,7 @@ div{
     color: white;
 }
 .aboutme{
+    padding: 20px 20px;
     bottom:160px;
     position: relative;
     display: flex;
@@ -10,22 +11,28 @@ div{
 }
 .avatar{
     border-radius: 50%;
-    background-color: aquamarine;
+    background-color: cyan;
     position: relative;
     bottom: 130px;
     width: 150px;
     height: auto;
 }
 
+.contenedor{
+    display: block;
+    position: relative;
+    text-align: center;
+    bottom: 100px;
+    
+}
 .nombre{
     font-size: 25px;
-    position: relative;
     font-weight: bold;
-    left: 170px;
-    bottom: 260px;
+    position: relative;
+text-align: center;
 }
-.info{position: relative;
-    font-size: 20px;
-    right: 95px;
-    bottom: 200px;
+.info{margin-bottom: 50px;
+    bottom: 15px;
+    position: relative;
+text-align: center;
 }
