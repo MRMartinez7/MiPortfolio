@@ -1,5 +1,4 @@
-div{
-    background-color: blue;   
-padding: 10px; 
-   
-    }
+.contenedor{
+    background-color: blue;
+    width: 100%;
+}
