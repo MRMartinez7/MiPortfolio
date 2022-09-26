@@ -11,17 +11,19 @@ a{
  
 }
 img{    
+    padding: 10px   10px;
     top: 20px;
     position: relative;
    width: 60px;
     height: 60px;
 }
-.btn-primary{    
+.btn-primary{       
+    width: 15%; 
     position: relative;    
     margin: 10px;
     width: 80px;
     height: 40px;
-    bottom: 5px;
+    bottom: 15px;
     padding: 10px 10px;
 
    
@@ -33,3 +35,18 @@ img{
 }
 
 
+/*para vista de celular*/
+@media(max-width:575px){
+    .contenedor{
+        flex-direction: column;
+    }
+    .hder{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        margin: 0.4em;
+    
+    }
+}
