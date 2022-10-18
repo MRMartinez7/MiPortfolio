@@ -1,26 +1,26 @@
 <div>
     <h1>Experiencia Laboral</h1>
-    <ul>
-       
-        <li>
-            <h1>Ventas de Productos Electronicos.</h1>
-            <h3>(3meses)</h3>
-            <p>Durante este periodo trabaje en atencion al publico en venta perifericos, componente,
-                 armado y ventas de PCs.</p>
-        </li>
-        <li>
-            <h1>Tecnico de PC.</h1>
-            <h3>(10años)</h3>
-            <p>Realice de manera independiente manteniento de equipos, armado, 
-                instalacion de sistemas y venta de algunos componentes. ademas de
-                 esto mantenimiento de red, y configuracion de red</p>
-        </li>
-
-        <li>
-            <h1>Diseño grafico(textil).</h1>
-            <h3>(1años)</h3>
-            <p>realizo diseños de imagenes vectorizadas para de indumentaria deportiva y armado de molderia
-            entre otras cosas.</p>
-        </li>
-    </ul>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="islogged">
+            Nueva Experiencia
+        </button>
+    </div>
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let ExperienciaL of expe">
+                    <td><h2>{{ExperienciaL.nombreE}}</h2></td>
+                    <td>{{ExperienciaL.descripcionE}}</td>
+                    <td *ngIf="islogged"><button class="btn btn-light" routerLink="/editexp/{{ExperienciaL.id}}"><i class="bi bi-pencil-square"></i>Editar</button>
+                        </td>
+                    <td *ngIf="islogged"><button class="btn btn-dark" (click)="delete(ExperienciaL.id)"><i class="bi bi-trash"></i>Borrar</button>
+                    </td>
+                </tr>
+            </tbody>
+          
+    
+        </table>    
+    </div>
+    
 </div>
