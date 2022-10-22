@@ -1,38 +1,26 @@
 <div>
     <h1>Estudios</h1>
-    <ul>
-       
-        <li>
-            <h1>Estudios secundarios</h1>
-            <h3>(completo)</h3>
-            <p>"ECONOMIA Y GESTION DE LAS ORGANIZACIONES"</p>
-        </li>
-        <li>
-            <h1>Tecnicatura en informatica</h1>
-            <h3>(completo)</h3>
-            <p>"TECNICATURA EN TECNOLOGIA ESP. EN REDES Y SEGURIDAD INFORMATICA</p>
-        </li>
-
-        <li>
-            <h1>Tecnico</h1>
-            <h3>(completo)</h3>
-            <p>"TECNICO EN REPARACION DE PC"</p>
-        </li>
-        <li>
-            <h1>Capacitacion</h1>
-            <h3>(completo)</h3>
-            <p>"TECNICO EN REDES"</p>
-        </li>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+            Agregar Estudios
+        </button>
+    </div>
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td><h2>{{Educacion.nombreE}}</h2></td>
+                    <td>{{Educacion.descripcionE}}</td>
+                    <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil-square"></i>Editar</button>
+                        </td>
+                    <td *ngIf="isLogged"><button class="btn btn-dark" (click)="delete(Educacion.id)"><i class="bi bi-trash"></i>Borrar</button>
+                    </td>
+                </tr>
+            </tbody>
+          
     
-        <li>
-           <h1>Capacitacion</h1>
-           <h3>(completo)</h3>
-           <p>"CURSO DE CAPACITACION DE CUSTODIOS Y PERSONAL ESPECIALIZADO EN SEGURIDAD PRIVADA"</p>
-        </li>
-        <li>
-            <h1>Estudios Universitario</h1>
-            <h3>(Pendiente)</h3>
-            <p>"TECNICATURA UNIVERSITARIA EN ELECTRONICA"</p>
-        </li>
-</ul>
+        </table>    
+    </div>
+    
 </div>

@@ -1,7 +1,7 @@
 export class ExperienciaL {
     id? : number;
-    nombreE : string
-    descripcionE : string
+    nombreE : string;
+    descripcionE : string;
 
      constructor(nombreE: string, descripcionE: string){
         this.nombreE = nombreE;
