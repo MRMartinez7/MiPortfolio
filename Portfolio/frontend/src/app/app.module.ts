@@ -27,6 +27,9 @@ import { EditeducacionComponent } from './components/estudios/editeducacion.comp
 import { EditskillComponent } from './components/skills/editskill.component';
 import { NewskillComponent } from './components/skills/newskill.component';
 import { EditaboutmeComponent } from './components/aboutme/editaboutme.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 
@@ -59,7 +62,9 @@ import { EditaboutmeComponent } from './components/aboutme/editaboutme.component
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   
   ],
   providers: [

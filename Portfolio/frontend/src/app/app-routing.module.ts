@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EditaboutmeComponent } from './components/aboutme/editaboutme.component';
 import { EditeducacionComponent } from './components/estudios/editeducacion.component';
@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { EditskillComponent } from './components/skills/editskill.component';
 import { NewskillComponent } from './components/skills/newskill.component';
 
+
 const routes: Routes = [
 {path:'', component: HomeComponent},
 {path:'login', component: LoginComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
 {path: 'newskill', component: NewskillComponent},
 {path: 'editskill/:id', component: EditskillComponent},
 {path: 'editabout/:id', component: EditaboutmeComponent}
+
 ];
 
 @NgModule({

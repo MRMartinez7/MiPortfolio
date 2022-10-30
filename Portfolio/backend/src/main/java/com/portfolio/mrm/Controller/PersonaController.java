@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/personas")
-@CrossOrigin(origins = "https://martinezfrontend.web.app")
+@CrossOrigin(origins = "https://martinezmrporfolio.web.app")
 
 public class PersonaController {
     @Autowired
@@ -52,21 +52,10 @@ public class PersonaController {
         return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
     }*/
     
-    @PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody dtoPersona dtopersona){
-        if(StringUtils.isBlank(dtopersona.getNombre())){
-            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        }
-        if(impPersonaService.existsByNombre(dtopersona.getNombre())){
-            return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
-        }
-        
-        Persona persona = new Persona(
-                dtopersona.getNombre(), dtopersona.getDescripcion()
-            );
-        impPersonaService.save(persona);
-        return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
-                
+    @PostMapping("/personas/crear")
+    public String createPersona(@RequestBody Persona persona){
+        impPersonaService.savePersona(persona);
+        return "La persona fue creada correctamente";
     }
    
     @PutMapping("/update/{id}")
